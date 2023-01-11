@@ -14,7 +14,7 @@ public class NotificationService {
     public void send(NotificationRequest notificationRequest) {
         notificationRepository.save(
                 Notification.builder()
-                        .notificationId(notificationRequest.toCustomerId())
+                        .toCustomerId(notificationRequest.toCustomerId())
                         .toCustomerEmail(notificationRequest.toCustomerName())
                         .sender("Amigoscode")
                         .message(notificationRequest.message())
